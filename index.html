@@ -4,9 +4,15 @@
     <title>김지안의 홈페이지</title>
     <meta charset="utf-8" />
     <meta name="keywords" content="웹퍼블리싱, 계원, html, css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      body{
+        color:darkgreen;
+      }
+    </style>
   </head>
-  <body>
-    <a href="http://jiankim0.github.io/sub2.html">서브페이지</a>
+  <body> <!-- 본문 -->
+    <a style= "color:palegoldenrod;" a href="http://jiankim0.github.io/sub2.html">서브페이지</a>
     <a href="http://www.naver.com">네이버</a>
     <a href="https://cafe.naver.com/kwdmd#" target="_blank">계원디미디카페</a>
         
@@ -179,27 +185,9 @@
     <header></header> <!-- 본문(body)내의 서론 -->
     <footer></footer> <!-- 본문(body)내의 결론 -->
 
-    <canvus id="myCanvas"></canvus>
+    <canvas id="myCanvas"></canvas>
     <script>
       var canvas = document.getElementById("myCanvas");
-      //get element by id
-      //id 기준으로 요소 가져오기
-      var ctx = canvas.getContext("2d");
-      ctx.fillStyle = "#FF0000";
-
-      ctx.fillRect(25, 25, 100, 100); //채움 사각형
-    </script>
-  </body>
-element by id
-      //id 기준으로 요소 가져오기
-      var ctx = canvas.getContext("2d");
-      ctx.fillStyle = "#FF0000";
-
-      ctx.fillRect(25, 25, 100, 100); //채움 사각형
-    </script>
-  </body>
-element by id
-      //id 기준으로 요소 가져오기
       var ctx = canvas.getContext("2d");
       ctx.fillStyle = "#FF0000";
 
@@ -225,6 +213,14 @@ element by id
       ctx.stroke();
     </script>
 
-    <audio> </audio>
+    <audio controls>
+      <source src="mp3/file_example_MP3_700KB.mp3" type="audio/mpeg" />
+    </audio>
+    <video controls>
+      <source src="MP4/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
+      </video>
+
+
+
   </body>
 </html>
