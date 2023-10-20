@@ -1,0 +1,82 @@
+<html> 
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <style>
+            body{color:rgb(81, 153, 153);}
+            div{
+                color:darkblue;
+                color:#000000;
+                color: rgb(100% 50% 0%);
+                color: rgb(200,120,90);
+
+            }
+
+            /* css 주석 */
+        </style>
+        <!--html주석-->
+    </head>
+    <body>
+        <div id="di">상속</div>
+        <style>
+            div{
+                background-color: lightgreen;
+                border: solid 1px black;
+            }
+            #d2{
+                widht:100px;
+                height:200px;
+            }
+        </style>
+        <div id="d2">widht height</div>
+
+        <style>
+            #d3{
+                padding: 30pxs;
+
+            }
+        </style>
+        <div id="d3">padding</div>
+
+        <style>
+            #d4{
+                margin: 30pxs;
+
+            }
+        </style>
+        <div id="d4">margin</div>
+
+        <style>
+            *{
+                text-decoration: underline;
+            }
+            strong{color: red;}
+            em{color: purple;}
+        </style>
+        <strong>strong</strong>
+        <em>em</em>
+        <strong>strong2</strong>
+        <style>
+            .c1{font-size: 30px;}
+            #i1{font-size: 90px;}
+        </style>
+        <div class="c1">class selector</div>
+        <div id="i1">id selector</div>
+        <style>
+            #d5 ::first-line{
+                color:red;
+            }
+            #d5 ::first-letter{
+                font-size: 50px;
+            } 
+            #d5 ::before{content: "시작";}
+            #d5 ::after{content: "끝";}
+        </style>
+        <div id="d5">
+            first line, first letter, first line, first letter,
+            first line, first letter, first line, first letter,
+            first line, first letter, first line, first letter,
+            first line, first letter, first line, first letter,
+        </div>
+    </body>
+</html>
