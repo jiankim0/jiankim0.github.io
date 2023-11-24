@@ -1,13 +1,171 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title> 기말평가 - 포트폴리오, 자유주제 </title>
+        <title>Jian Portfolio</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="Layout1/css_last.css" />
         <style>
-            h1{
+            header{
+                display: flex;
+                justify-content: center;
+                background-color: rgb(255, 255, 255);
+                color:rgb(17, 17, 17)
+            }
+            header ul{
+                list-style: none;
+                display: flex;
+                padding: 0px; /*사용자 에이전트 스타일시트를 확인, 내가 적지 않았음에도 들어간 값 존재할 수 있음. 말을 번복하여 테스트 한 후 우측상단 위치 확인 후 수정*/
+            }
+            header li{
+                padding: 0px 25px;/*간격띄우기*/
+            }
+            header h1{
+                margin: 4px 0px;
+            }
+            header h1 span{ /* 부분적으로 색상번경 or 의미없이 쓰기 좋은 명령어 */
+                color:rgb(0, 0, 0)
+            }
+            #main_visual{
+                background-image: url("black"); /*같은 폴더 안에 있을때는 사진 이름만 입력*/
+                padding: 100px;
+                color:white;
                 text-align: center;
+                background-size: 100px auto;
+                background-repeat: no-repeat;
+                background-color: black;
+                background-position: 50% 50%;
+                background-size: contain; /*담기도록*/
+                background-size: cover; /*씌워지도록, 맨 마지막에 쓴 것만 적용되므로 현재적용된 명령어는 이것*/
+            }
+            #mian_visual h2{
+                font-size: 40px;
+                letter-spacing: 30px; /*글씨간격조정*/
+                margin: 0px;
+            }
+            #main_visual p{
+                margin: 0px;
+            }
+            nav ul{
+                list-style: none;
+                display: flex;
+            }
+            nav li{
+                padding: 0px 10px;
+            }
+            nav{
+                display: flex;
+                justify-content: space-between;
+                background-color: lightgrey;
+                padding: 5px 50px;
+            }
+            nav h2{
+                margin: 14px 0px;
+            }
+            #content>section:nth-child(1){background-color: rgb(97, 97, 97);}
+            #content>section:nth-child(2){background-color: rgb(97, 97, 97);}
+            #content>section:nth-child(3){background-color: rgb(97, 97, 97);}
+            #content>section:nth-child(4){background-color: rgb(97, 97, 97);}
+            #content>section>div{
+                display: flex;
+                justify-content: center;
+            }
+            #content>section>div>div{
+                margin: 0px 10px;
+            }
+            #content dt{
+                font-weight: bold;
+            }
+            #content dd{
+                margin: 0px;
+            }
+            h3{
+                margin: 0px;
+                margin-bottom: 30px;
+                color: white;
+                font-weight: normal;
+            }
+            section{
+
+                padding: 50px;
+            }
+            section ul{
+                padding: 50px;
+                list-style: none;
+            }
+            footer{
+                display: flex;
+                justify-content: space-between;
+                background-color: #1a1a1a;
+                color: white;
+                padding: 50px;
+            }
+            footer ul{
+                list-style: none;
+                display: flex;
+                padding: 0px;
+            }
+            footer li{
+                padding: 0px 0px;
+            }
+            footer div:first-child li{
+                border-right: solid 1px lightgrey; /*경계선*/
+            }
+            footer div :first-child li:last-child{
+                border: none;
             }
         </style>
     </head>
     <body>
-        <h1>제목</h1>
+        <div id="wrap">
+            <header>
+                <ul>
+                    <li><a href="">HOME</a></li> <!--카테고리랑 같은 이름의 html 파일 만들어서 제작, 클릭하면 들어가도록 ""안에 파일 넣기-->
+                    <li><a href="">ABOUT ME</a></li>
+                </ul>
+                <h1>MY<span>FOLIO</span></h1>
+                <ul>
+                    <li><a href="">MY WORK</a></li>
+                    <li><a href="">CONTACT ME</a></li>
+                </ul>
+            </header>
+            <div id="main_visual">
+                <div>Lorem ipsum dolor sit iusmod tempor</div>
+                <h2>incididunt bore</h2>
+                <p>Orem ipsum dolor sit amet, consectetur</p>
+                <img src="">
+            </div>
+            <section>
+                <h3>ABOUT ME</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                    sed do eiusmod tempor incididunt ut labore et <br /> dolore magna 
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                    ullamco laboris nisi ut aliquip ex ea <br /> commodo consequat 
+                    duis aute irure dolor.
+                </p>
+                <ul>
+                    <li>mememememememe</li>
+                </ul>
+            </section>
+            <section>content2</section>
+            <footer>
+                <div>
+                    <ul>
+                        <li>home</li>
+                        <li>about</li>
+                        <li>services</li>
+                    </ul>
+                    <p>Copyright 2023. 김지안 All rights reserved.</p>
+                    <p>전화번호 : 010-9957-5930 E-mail : ja.kim9158@gmail.com</p>
+                </div>
+                <div>
+                    <ul>
+                        <li><img src="Layout1/sns1.png" class="footerul-image" alt="Social Media 1"></li>
+                        <li><img src="Layout1/sns2.png" class="footerul-image" alt="Social Media 2"></li>
+                        <li><img src="Layout1/sns3.png" class="footerul-image" alt="Social Media 3"></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>
