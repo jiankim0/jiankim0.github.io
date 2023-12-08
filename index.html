@@ -1,18 +1,137 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>김지안의 홈페이지 입니다.</title>
-        <meta charset="utf-8" />
-    </head>
-    <body>
-        <a href="html.html">html 연습</a>
-        <a href="css.html"> css 연습</a>
-        <a href="sub1.html"> 서브페이지1 연습</a>
-        <a href="sub2.html"> 서브페이지2 연습</a>
-        <a href="sub3.html"> 서브페이지3 연습</a>
-        <a href="Layout1/Layout1.html">레이아웃1 연습</a>
-        <a href="Layout1/Layout2.html">레이아웃2 연습</a>
-        <a href="Layout3/Layout3.html">레이아웃3 연습</a>
-        <a href="last.html">포트폴리오 페이지</a>
-    </body>
-</html>    
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: black;
+      color: white;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .category-button {
+      color: white;
+      cursor: pointer;
+      background-color: #555;
+      padding: 8px 15px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    .mega-menu {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: -80%; /* 메가메뉴 위치 오른쪽 */
+      background-color: #555;
+      padding: 20px;
+    }
+
+    .mega-menu a {
+      color: white;
+      display: block;
+      padding: 5px;
+      text-decoration: none;
+    }
+
+    .category-button:hover + .mega-menu,
+    .mega-menu:hover,
+    .category-button.active + .mega-menu {
+      right: 0; 
+    }
+
+    .circle-animation {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      border: 2px solid white;
+      border-radius: 50%;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .circle-animation:hover {
+      background-color: grey;
+    }
+
+    @keyframes enlargeAndHide {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+
+    .hidden-text {
+      position: absolute;
+      top: 50%;
+      right: 60%;
+      transform: translateY(-50%);
+      font-size: 200px;
+      color: white;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .circle-animation.clicked + .hidden-text {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="category-button" id="categoryButton">카테고리</div>
+    <div class="mega-menu">
+      <a href="html.html">HTML 연습</a>
+      <a href="css.html">CSS 연습</a>
+      <a href="sub1.html">서브페이지1 연습</a>
+      <a href="sub2.html">서브페이지2 연습</a>
+      <a href="sub3.html">서브페이지3 연습</a>
+      <a href="Layout1/Layout1.html">레이아웃1 연습</a>
+      <a href="Layout1/Layout2.html">레이아웃2 연습</a>
+      <a href="Layout3/Layout3.html">레이아웃3 연습</a> 
+      <a href="last.html">포트폴리오 페이지</a>
+    </div>
+  </div>
+
+  <div class="circle-animation" id="circleAnimation"></div>
+  <div class="hidden-text" id="hiddenText">INDEX <br></br> PAGE</div>
+
+  <script>
+    var categoryButton = document.getElementById('categoryButton');
+    var megaMenu = document.querySelector('.mega-menu');
+    var circle = document.getElementById('circleAnimation');
+    var hiddenText = document.getElementById('hiddenText');
+
+    categoryButton.addEventListener('click', function() {
+      categoryButton.classList.toggle('active');
+      megaMenu.style.display = megaMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    circle.addEventListener('click', function() {
+      circle.classList.add('clicked');
+      circle.style.animation = 'enlargeAndHide 0.5s forwards';
+      hiddenText.style.opacity = 1;
+    });
+  </script>
+</body>
+</html>

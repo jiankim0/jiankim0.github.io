@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MY WORK</title>
+        <meta charset="utf-8" />
+        <style>
+            #wrap{
+                min-width: 1000px;
+                max-width: 1920px;
+                margin: 0px auto;
+            }
+            body {
+                background-image: url(background.png);
+            }
+            header{
+                display: flex;
+                justify-content: center;
+                background-color: rgb(255, 255, 255);
+                color:rgb(17, 17, 17)
+            }
+            header ul {
+                list-style: none;
+                display: flex;
+                padding: 0px; /* 원인 파악 후 패딩을 올바른 자리에 넣을 것 */
+            }
+            header li{
+                padding: 0px 25px;/*간격띄우기*/
+            }
+            header h1{
+                margin: 4px 0px;
+            }
+            .short_line{
+                width: 25px;
+                border-top: solid 1px black;
+            }
+            #content{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .content_card{
+                width: 310px;
+                background-color: white;
+                box-shadow: 2px 2px 2px gray;
+                margin: 20px;
+            }
+            .content_card h2 {
+                margin-top: 0px;
+            }
+            .content_card>div:last-child {
+                padding: 25px;
+            }
+            .content_card>div:first-child /* 띄어쓰기 대신 > 활용할 경우 직속 지정 */ {
+                position: relative; /* 관계적인 */
+                /* relatice인 부모는 absolute인 자식의 기준이 된다 */  
+            } 
+            .content_card video{
+                display: block;
+                width: 100%;
+            }
+            .content_card img{
+                display: block;
+            }
+            .content_card>div:last-child>div:nth-child(2) {
+                color: gray;
+            }
+            .category{
+                background-color: black;
+                color: white;
+                position: absolute;
+                /* 위치지정: 절대적인 */
+                left: 0px;
+                bottom: 0px; /* 숫자로 밀고 당겨서 조절하면 상황에 따라 계속 틀어져서 어긋나기때문에 추천하지않음. 부모개체에 요청할 것 */
+            }
+            .long_line{
+                border-top: dotted 1px gray;
+                margin: 10px 0px;
+            }
+            .content_card p {
+                margin: 0px;
+            }
+            footer ul{
+                list-style: none;
+                display: flex;
+                padding: 0px;
+            }
+            footer li{
+                padding-right: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><a href="last.html">HOME</a></li> <!--카테고리랑 같은 이름의 html 파일 만들어서 제작, 클릭하면 들어가도록 ""안에 파일 넣기-->
+                <li><a href="ABOUT ME.html">ABOUT ME</a></li>
+            </ul>
+            <h1>MY<span>FOLIO</span></h1>
+            <ul>
+                <li><a href="MY WORK.html">MY WORK</a></li>
+                <li><a href="CONTACT ME.html">CONTACT ME</a></li>
+            </ul>
+        </header>
+            <div id="wrap">
+                <div id="content">
+                    <section class="content_card">
+                        <div>
+                            <video controls>
+                                <source src="image/영상1학기기말.mp4" type="video/mp4">
+                            </video>
+                            <div class="category">Basic Video</div>
+                        </div>
+                        <div>
+                            <h2>1학기_영상기초_기말평가</h2>
+                            <div>2023. 06. 15</div>
+                            <div class="long_line"></div>
+                            <p>'계원예술대학교의 소프트웨어 툴 교육과 활용에 대한 홍보 및 광고' 를 키치하고 
+                                독특한 컨셉의 그래픽을 활용하여 화려한 시각적 표현을 통해 나타낸다. 
+                                모두가 효율적으로 잘할 수 있는 컨셉을 잡자는 목적을 두고 시작한 영상 팀 프로젝트.
+                            </p>
+                            <div class="long_line"></div>
+                            <div>Read on</div>                   
+                        </div>
+                    </section>
+                    <section class="content_card">
+                        <div>
+                            <video controls>
+                                <source src="image/1학기기획기말.mp4" type="video/mp4">
+                            </video>
+                            <div class="category">Basic Planning</div>
+                        </div>
+                        <div>
+                            <h2>1학기_기획기초_기말평가</h2>
+                            <div>2023. 12. 01</div>
+                            <div class="long_line"></div>
+                            <p>낙서벽을 통해 디지털미디어에 대한 사람들의 니즈와 원츠를 관찰하고, 그에 맞추어 
+                                미디어월을 제작하여 정보관의 X-space에서 대형 스크린을 통해 발표를 진행하였다.
+                            </p>
+                            <div class="long_line"></div>
+                            <div>Read on</div>                   
+                        </div>
+                    </section>
+                    <section class="content_card">
+                        <div>
+                            <img src="img3.png" />
+                            <div class="category">photoshop design</div>
+                        </div>
+                        <div>
+                            <h2>Work Title</h2>
+                            <div>2023. 12. 01</div>
+                            <div class="long_line"></div>
+                            <p>A direct mail kit that announces the Dulux 
+                              Colour Awards Competition has commenced. A collection of posters showing the 
+                              famous colours of history, advertises you add your own colours to history.
+                            </p>
+                            <div class="long_line"></div>
+                            <div>Read on</div>                   
+                        </div>
+                    </section>
+                    <section class="content_card">
+                        <div>
+                            <img src="img4.png" />
+                            <div class="category">photoshop design</div>
+                        </div>
+                        <div>
+                            <h2>Work Title</h2>
+                            <div>2023. 12. 01</div>
+                            <div class="long_line"></div>
+                            <p>A direct mail kit that announces the Dulux 
+                              Colour Awards Competition has commenced. A collection of posters showing the 
+                              famous colours of history, advertises you add your own colours to history.
+                            </p>
+                            <div class="long_line"></div>
+                            <div>Read on</div>                   
+                        </div>
+                    </section>
+                    <section class="content_card">
+                        <div>
+                            <img src="img5.png" />
+                            <div class="category">photoshop design</div>
+                        </div>
+                        <div>
+                            <h2>Work Title</h2>
+                            <div>2023. 12. 01</div>
+                            <div class="long_line"></div>
+                            <p>A direct mail kit that announces the Dulux 
+                              Colour Awards Competition has commenced. A collection of posters showing the 
+                              famous colours of history, advertises you add your own colours to history.
+                            </p>
+                            <div class="long_line"></div>
+                            <div>Read on</div>                   
+                        </div>
+                    </section>
+                    <section class="content_card">
+                        <div>
+                            <img src="img6.png" />
+                            <div class="category">photoshop design</div>
+                        </div>
+                        <div>
+                            <h2>Work Title</h2>
+                            <div>2023. 12. 01</div>
+                            <div class="long_line"></div>
+                            <p>A direct mail kit that announces the Dulux 
+                              Colour Awards Competition has commenced. A collection of posters showing the 
+                              famous colours of history, advertises you add your own colours to history.
+                            </p>
+                            <div class="long_line"></div>
+                            <div>Read on</div>                   
+                        </div>
+                    </section>
+                    <section class="content_card">
+                        <div>
+                            <img src="img7.png" />
+                            <div class="category">photoshop design</div>
+                        </div>
+                        <div>
+                            <h2>Work Title</h2>
+                            <div>2023. 12. 01</div>
+                            <div class="long_line"></div>
+                            <p>A direct mail kit that announces the Dulux 
+                              Colour Awards Competition has commenced. A collection of posters showing the 
+                              famous colours of history, advertises you add your own colours to history.
+                            </p>
+                            <div class="long_line"></div>
+                            <div>Read on</div>                   
+                        </div>
+                    </section>
+                    <section class="content_card">
+                        <div>
+                            <img src="img8.png" />
+                            <div class="category">photoshop design</div>
+                        </div>
+                        <div>
+                            <h2>Work Title</h2>
+                            <div>2023. 12. 01</div>
+                            <div class="long_line"></div>
+                            <p>A direct mail kit that announces the Dulux 
+                              Colour Awards Competition has commenced. A collection of posters showing the 
+                              famous colours of history, advertises you add your own colours to history.
+                            </p>
+                            <div class="long_line"></div>
+                            <div>Read on</div>                   
+                        </div>
+                    </section>
+                    <section class="content_card">
+                        <div>
+                            <img src="img9.png" />
+                            <div class="category">photoshop design</div>
+                        </div>
+                        <div>
+                            <h2>Work Title</h2>
+                            <div>2023. 12. 01</div>
+                            <div class="long_line"></div>
+                            <p>A direct mail kit that announces the Dulux 
+                              Colour Awards Competition has commenced. A collection of posters showing the 
+                              famous colours of history, advertises you add your own colours to history.
+                            </p>
+                            <div class="long_line"></div>
+                            <div>Read on</div>                   
+                        </div>
+                    </section>
+                    <section class="content_card">
+                        <div>
+                            <img src="img10.png" />
+                            <div class="category">photoshop design</div>
+                        </div>
+                        <div>
+                            <h2>Work Title</h2>
+                            <div>2023. 12. 01</div>
+                            <div class="long_line"></div>
+                            <p>A direct mail kit that announces the Dulux 
+                              Colour Awards Competition has commenced. A collection of posters showing the 
+                              famous colours of history, advertises you add your own colours to history.
+                            </p>
+                            <div class="long_line"></div>
+                            <div>Read on</div>                   
+                        </div>
+                    </section>
+                    <section class="content_card">
+                        <div>
+                            <img src="img11.png" />
+                            <div class="category">photoshop design</div>
+                        </div>
+                        <div>
+                            <h2>Work Title</h2>
+                            <div>2023. 12. 01</div>
+                            <div class="long_line"></div>
+                            <p>A direct mail kit that announces the Dulux 
+                              Colour Awards Competition has commenced. A collection of posters showing the 
+                              famous colours of history, advertises you add your own colours to history.
+                            </p>
+                            <div class="long_line"></div>
+                            <div>Read on</div>                   
+                        </div>
+                    </section>
+                </div>
+                <footer>
+                    <div class="short_line"></div>
+                    <ul>
+                        <li><img src="sns1.png" /></li>
+                        <li><img src="sns2.png" /></li>
+                        <li><img src="sns3.png" /></li>
+                        <li><img src="sns4.png" /></li>
+                    </ul>
+                    <div class="short_line"></div>
+                    <p>Copyright</p>
+                </footer>
+            </div>
+    </body>
+</html>    
