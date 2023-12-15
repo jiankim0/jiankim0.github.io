@@ -1,130 +1,203 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>ABOUT ME</title>
-        <meta charset="utf-8" />
-        <style>
-            header{
-                display: flex;
-                justify-content: center;
-                background-color: rgb(255, 255, 255);
-                color:rgb(17, 17, 17)
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <title>ABOUT ME</title>
+    <link rel="stylesheet" href="styles.css"></link>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            color: white;
+            font-family: 'Pretendard', sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(0, 0, 0);
+            color: #ffcc00;
+            padding: 20px;
+        }
+        header ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+        header li {
+            padding: 0 25px;
+        }
+        header h1 {
+            margin: 4px 0;
+        }
+        header h1 span {
+            color: rgb(255, 255, 255);
+        }
+        #main_visual {
+            position: relative;
+            padding: 100px;
+            color: white;
+            text-align: center;
+        }
+        #main_visual::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("image/프로필.jpg");
+            background-size: cover;
+            filter: blur(10px); 
+            z-index: -1; 
+        }
+        #main_visual h2 {
+            font-size: 120px;
+            letter-spacing: 5px;
+            margin: 0;
+            text-align: left;
+        }
+        #main_visual h3 {
+            margin: 20px 0;
+            text-align: left;
+            margin-bottom: 80px;
+        }
+        #profile {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            position: relative;
+            background-color: rgba(30, 30, 30, 0.7); 
+            padding: 20px; 
+            border-radius: 10px; 
+        }
+        #profile div {
+            margin: 20px;
+            text-align: center;
+        }
+        #profile img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        #content>section {
+            background-color: rgb(97, 97, 97);
+            padding: 50px;
+        }
+        h3 {
+            margin: 0;
+            margin-bottom: 30px;
+            color: white;
+            font-weight: normal;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 50px;
+        }
+        footer ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+        footer li {
+            padding: 0 5px;
+        }
+        footer div:first-child li {
+            border-right: solid 1px lightgrey;
+        }
+        footer div :first-child li:last-child {
+            border: none;
+        }
+        footer li img {
+            width: 30px;
+            height: auto;
+            display: inline-block;
+        }
+        @font-face {
+            font-family: 'EdensorFree';
+            src: url('edensor/Edensor-FREE.otf') format('woff2'), 
+            url('edensor/Edensor-FREE.otf') format('woff');   
+            font-weight: normal;
+            font-style: normal;
             }
-            header ul{
-                list-style: none;
-                display: flex;
-                padding: 0px; /*사용자 에이전트 스타일시트를 확인, 내가 적지 않았음에도 들어간 값 존재할 수 있음. 말을 번복하여 테스트 한 후 우측상단 위치 확인 후 수정*/
+            body {
+            font-family: '영문 글꼴', 'EdensorFree', sans-serif;
             }
-            header li{
-                padding: 0px 25px;/*간격띄우기*/
+            body, h1, h2, h3, p, ul, li, div {
+            font-family: '영문 글꼴', 'EdensorFree', sans-serif;
             }
-            header h1{
-                margin: 4px 0px;
+            @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+            h1, p, .korean-text {
+            font-family: 'Pretendard', sans-serif;
             }
-            header h1 span{ /* 부분적으로 색상번경 or 의미없이 쓰기 좋은 명령어 */
-                color:rgb(0, 0, 0)
+            a:hover {
+            color: #ffcc00; 
+            transition: color 0.3s ease; 
             }
-            #main_visual{
-                background-image: url("black"); /*같은 폴더 안에 있을때는 사진 이름만 입력*/
-                padding: 100px;
-                color:white;
-                text-align: center;
-                background-size: 100px auto;
-                background-repeat: no-repeat;
-                background-color: black;
-                background-position: 50% 50%;
-                background-size: contain; /*담기도록*/
-                background-size: cover; /*씌워지도록, 맨 마지막에 쓴 것만 적용되므로 현재적용된 명령어는 이것*/
-            }
-            #mian_visual h2{
-                font-size: 40px;
-                letter-spacing: 30px; /*글씨간격조정*/
-                margin: 0px;
-            }
-            #main_visual p{
-                margin: 0px;
-            }
-            nav ul{
-                list-style: none;
-                display: flex;
-            }
-            nav li{
-                padding: 0px 10px;
-            }
-            nav{
-                display: flex;
-                justify-content: space-between;
-                background-color: lightgrey;
-                padding: 5px 50px;
-            }
-            nav h2{
-                margin: 14px 0px;
-            }
-            #content>section:nth-child(1){background-color: rgb(97, 97, 97);}
-            #content>section:nth-child(2){background-color: rgb(97, 97, 97);}
-            #content>section:nth-child(3){background-color: rgb(97, 97, 97);}
-            #content>section:nth-child(4){background-color: rgb(97, 97, 97);}
-            #content>section>div{
-                display: flex;
-                justify-content: center;
-            }
-            #content>section>div>div{
-                margin: 0px 10px;
-            }
-            #content dt{
-                font-weight: bold;
-            }
-            #content dd{
-                margin: 0px;
-            }
-            h3{
-                margin: 0px;
-                margin-bottom: 30px;
-                color: white;
-                font-weight: normal;
-            }
-            section{
-
-                padding: 50px;
-            }
-            section ul{
-                padding: 50px;
-                list-style: none;
-            }
-            footer{
-                display: flex;
-                justify-content: space-between;
-                background-color: #1a1a1a;
-                color: white;
-                padding: 50px;
-            }
-            footer ul{
-                list-style: none;
-                display: flex;
-                padding: 0px;
-            }
-            footer li{
-                padding: 0px 0px;
-            }
-            footer div:first-child li{
-                border-right: solid 1px lightgrey; /*경계선*/
-            }
-            footer div :first-child li:last-child{
-                border: none;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="last.html">HOME</a></li>
+            <li><a href="ABOUT ME.html">ABOUT ME</a></li>
+        </ul>
+        <h1><a href="index.html">MY<span>FOLIO</span></a></h1>
+        <ul>
+            <li><a href="MY WORK.html">MY WORK</a></li>
+            <li><a href="CONTACT ME.html">CONTACT ME</a></li>
+        </ul>
+    </header>
+    <section id="main_visual">
+        <h2>About Me</h2>
+        <h3>Passionate individual exploring the realms of creativity and technology.</h3>
+        <div id="profile">
+            <img src="image/프로필.jpg" alt="Profile Picture"></img>
+            <div>
+                <h3>Name</h3>
+                <p>김지안</p>
+            </div>
+            <div>
+                <h3>Gender</h3>
+                <p>여성</p>
+            </div>
+            <div>
+                <h3>Age</h3>
+                <p>20세</p>
+            </div>
+            <div>
+                <h3>University</h3>
+                <p>계원예술대학교</p>
+            </div>
+            <div>
+                <h3>MBTI</h3>
+                <p>INFJ-T</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>
             <ul>
-                <li><a href="last.html">HOME</a></li> <!--카테고리랑 같은 이름의 html 파일 만들어서 제작, 클릭하면 들어가도록 ""안에 파일 넣기-->
-                <li><a href="ABOUT ME.html">ABOUT ME</a></li>
+                <li>home</li>
+                <li>about</li>
+                <li>services</li>
             </ul>
-            <h1>MY<span>FOLIO</span></h1>
+            <p>Copyright 2023. Your Name. All rights reserved.</p>
+            <p>Phone: 010-1234-5678 | Email: your.email@example.com</p>
+        </div>
+        <div>
             <ul>
-                <li><a href="MY WORK.html">MY WORK</a></li>
-                <li><a href="CONTACT ME.html">CONTACT ME</a></li>
+                <li><img src="Layout1/sns1.png" class="footerul-image" alt="Social Media 1"></img></li>
+                <li><img src="Layout1/sns2.png" class="footerul-image" alt="Social Media 2"></img></li>
+                <li><img src="Layout1/sns3.png" class="footerul-image" alt="Social Media 3"></img></li>
             </ul>
-        </header>
-    </body>
-</html>    
+        </div>
+    </footer>
+</body>
+</html>

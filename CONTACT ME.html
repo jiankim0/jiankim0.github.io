@@ -1,130 +1,241 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>CONTACT ME</title>
-        <meta charset="utf-8" />
-        <style>
-            header{
-                display: flex;
-                justify-content: center;
-                background-color: rgb(255, 255, 255);
-                color:rgb(17, 17, 17)
-            }
-            header ul{
-                list-style: none;
-                display: flex;
-                padding: 0px; /*사용자 에이전트 스타일시트를 확인, 내가 적지 않았음에도 들어간 값 존재할 수 있음. 말을 번복하여 테스트 한 후 우측상단 위치 확인 후 수정*/
-            }
-            header li{
-                padding: 0px 25px;/*간격띄우기*/
-            }
-            header h1{
-                margin: 4px 0px;
-            }
-            header h1 span{ /* 부분적으로 색상번경 or 의미없이 쓰기 좋은 명령어 */
-                color:rgb(0, 0, 0)
-            }
-            #main_visual{
-                background-image: url("black"); /*같은 폴더 안에 있을때는 사진 이름만 입력*/
-                padding: 100px;
-                color:white;
-                text-align: center;
-                background-size: 100px auto;
-                background-repeat: no-repeat;
-                background-color: black;
-                background-position: 50% 50%;
-                background-size: contain; /*담기도록*/
-                background-size: cover; /*씌워지도록, 맨 마지막에 쓴 것만 적용되므로 현재적용된 명령어는 이것*/
-            }
-            #mian_visual h2{
-                font-size: 40px;
-                letter-spacing: 30px; /*글씨간격조정*/
-                margin: 0px;
-            }
-            #main_visual p{
-                margin: 0px;
-            }
-            nav ul{
-                list-style: none;
-                display: flex;
-            }
-            nav li{
-                padding: 0px 10px;
-            }
-            nav{
-                display: flex;
-                justify-content: space-between;
-                background-color: lightgrey;
-                padding: 5px 50px;
-            }
-            nav h2{
-                margin: 14px 0px;
-            }
-            #content>section:nth-child(1){background-color: rgb(97, 97, 97);}
-            #content>section:nth-child(2){background-color: rgb(97, 97, 97);}
-            #content>section:nth-child(3){background-color: rgb(97, 97, 97);}
-            #content>section:nth-child(4){background-color: rgb(97, 97, 97);}
-            #content>section>div{
-                display: flex;
-                justify-content: center;
-            }
-            #content>section>div>div{
-                margin: 0px 10px;
-            }
-            #content dt{
-                font-weight: bold;
-            }
-            #content dd{
-                margin: 0px;
-            }
-            h3{
-                margin: 0px;
-                margin-bottom: 30px;
-                color: white;
-                font-weight: normal;
-            }
-            section{
-
-                padding: 50px;
-            }
-            section ul{
-                padding: 50px;
-                list-style: none;
-            }
-            footer{
-                display: flex;
-                justify-content: space-between;
-                background-color: #1a1a1a;
-                color: white;
-                padding: 50px;
-            }
-            footer ul{
-                list-style: none;
-                display: flex;
-                padding: 0px;
-            }
-            footer li{
-                padding: 0px 0px;
-            }
-            footer div:first-child li{
-                border-right: solid 1px lightgrey; /*경계선*/
-            }
-            footer div :first-child li:last-child{
-                border: none;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
+<head>
+    <title>CONTACT ME</title>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            color: white; 
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(0, 0, 0);
+            color: #ffcc00;
+        }
+        header ul {
+            list-style: none;
+            display: flex;
+            padding: 0px;
+        }
+        header li {
+            padding: 0px 25px;
+        }
+        header h1 {
+            margin: 4px 0px;
+        }
+        header h1 span {
+            color: rgb(255, 255, 255);
+        }
+        #main_visual {
+            background-image: url("black");
+            padding: 100px;
+            text-align: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: black;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        #main_visual h2 {
+            font-size: 40px;
+            letter-spacing: 30px;
+            margin: 0px;
+        }
+        #main_visual p {
+            margin: 0px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav li {
+            padding: 0px 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: lightgrey;
+            padding: 5px 50px;
+        }
+        nav h2 {
+            margin: 14px 0px;
+        }
+        #content>section:nth-child(1) {
+            background-color: rgb(97, 97, 97);
+        }
+        #content>section:nth-child(2) {
+            background-color: rgb(97, 97, 97);
+        }
+        #content>section:nth-child(3) {
+            background-color: rgb(97, 97, 97);
+        }
+        #content>section:nth-child(4) {
+            background-color: rgb(97, 97, 97);
+        }
+        #content>section>div {
+            display: flex;
+            justify-content: center;
+        }
+        #content>section>div>div {
+            margin: 0px 10px;
+        }
+        #content dt {
+            font-weight: bold;
+        }
+        #content dd {
+            margin: 0px;
+        }
+        h3 {
+            margin: 0px;
+            margin-bottom: 30px;
+            color: white;
+            font-weight: normal;
+        }
+        section {
+            padding: 50px;
+            color: white;
+            text-align: center;
+        }
+        section ul {
+            padding: 50px;
+            list-style: none;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 50px;
+        }
+        footer ul {
+            list-style: none;
+            display: flex;
+            padding: 0px;
+        }
+        footer li {
+            padding: 0px 5px;
+        }
+        footer div:first-child li {
+            border-right: solid 1px lightgrey;
+        }
+        footer div :first-child li:last-child {
+            border: none;
+        }
+        footer li img {
+            width: 30px;
+            height: auto;
+            display: inline-block;
+        }
+        @font-face {
+            font-family: 'EdensorFree';
+            src: url('edensor/Edensor-FREE.otf') format('woff2'),
+            url('edensor/Edensor-FREE.otf') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: '영문 글꼴', 'EdensorFree', sans-serif;
+        }
+        body, h1, h2, h3, p, ul, li, div {
+            font-family: '영문 글꼴', 'EdensorFree', sans-serif;
+        }
+        @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+        h1, p, .korean-text {
+            font-family: 'Pretendard', sans-serif;
+        }
+        a:hover {
+            color: #ffcc00;
+            transition: color 0.3s ease;
+        }
+        #map-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: black;
+            overflow: hidden;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        #contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #contact-info img {
+            height: auto;
+            margin-right: 10px;
+        }
+        #contact-info a img.cal-icon {
+            width: 600px; 
+            height: auto;
+            margin-right: 10px;
+        }
+        #contact-info div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: left;
+            margin-top: 10px;
+        }
+        img.src {
+            max-width: 30px;
+            height: auto; 
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="last.html">HOME</a></li>
+            <li><a href="ABOUT ME.html">ABOUT ME</a></li>
+        </ul>
+        <h1><a href="index.html">MY<span>FOLIO</span></a></h1>
+        <ul>
+            <li><a href="MY WORK.html">MY WORK</a></li>
+            <li><a href="CONTACT ME.html">CONTACT ME</a></li>
+        </ul>
+    </header>
+    <section>   
+            <div id="contact-info">
+                <a href="https://map.naver.com/p/entry/place/11591383?c=15.00,0,0,0,dh">
+                <img src="image/계원.png" class="cal-icon"></img>
+                <p>경기 의왕시 내손동 247-1</p>
+                </a>
+            </div>
+            <div>
+                <img src="image/전화.png" class="src"></img>
+                <p>010-9957-5930</p>
+            </div>
+            <div>
+                <img src="image/인스타.png" class="src"></img>
+                <p>@028.372</p>
+            </div>
+    </section>
+    <footer>
+        <div>
             <ul>
-                <li><a href="last.html">HOME</a></li> <!--카테고리랑 같은 이름의 html 파일 만들어서 제작, 클릭하면 들어가도록 ""안에 파일 넣기-->
-                <li><a href="ABOUT ME.html">ABOUT ME</a></li>
+                <li>home</li>
+                <li>about</li>
+                <li>services</li>
             </ul>
-            <h1>MY<span>FOLIO</span></h1>
+            <p>Copyright 2023. 김지안 All rights reserved.</p>
+            <p>전화번호 : 010-9957-5930 E-mail : ja.kim9158@gmail.com</p>
+        </div>
+        <div>
             <ul>
-                <li><a href="MY WORK.html">MY WORK</a></li>
-                <li><a href="CONTACT ME.html">CONTACT ME</a></li>
+                <li><img src="Layout1/sns1.png" class="footerul-image" alt="Social Media 1"></img></li>
+                <li><img src="Layout1/sns2.png" class="footerul-image" alt="Social Media 2"></img></li>
+                <li><img src="Layout1/sns3.png" class="footerul-image" alt="Social Media 3"></img></li>
             </ul>
-        </header>
-    </body>
-</html>    
+        </div>
+    </footer>
+</body>
+</html>
